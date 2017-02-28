@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creating an email script</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <style type="text/css">
+  	body {
+  		width: 100%;
+  		font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  	}
+  	.contain {
+		margin: 0 auto; 
+		width: 100%; 
+		padding: 40px; 
+  	}
+  	button {
+  		padding: 20px; 
+  		margin: 0 10px;
+  		background: #00a0df;
+  		color: #fff;
+  		font-size: 16px;
+  	}
+  	video {
+  		width: 1024px;
+  	}
+  </style>
+</head>
+<body>
+<div class="contain">
+<h1>Getting Started with ACP Emails</h1>
+<button onclick="playPause()">Play/Pause</button> 
+<!--
+<button onclick="makeNormal()">Normal</button>
+<button onclick="makeBig()">Big</button>
+<button onclick="makeSmall()">Small</button>
+  -->
+  <br><br>
+<video controls="true" poster="start.png" id="video1">
+	<source src="email-how-to.webm" type="video/webm">
+  <source src="email-how-to.mp4" type="video/mp4">
+
+	Your browser doesn't support HTML5 video :(
+</video>	
+</div>
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+    if (myVideo.paused) 
+        myVideo.play(); 
+    else 
+        myVideo.pause(); 
+} 
+/*
+function makeBig() { 
+    myVideo.width = 1366; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 568; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 1024; 
+} 
+*/
+</script> 
+</body>
+</html>
